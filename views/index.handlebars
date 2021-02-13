@@ -1,6 +1,6 @@
 <h1>Burgers</h1>
 
-<h2>Devoured burgers</h2>
+<h2>Burgers to Devour</h2>
 
 <ul>
   {{#each burgers}}
@@ -18,6 +18,7 @@
   {{#each burgers}}
   {{#if devoured}}
   <h1> {{this.name}}</h1>
+  <button id={{this.id}} class="delete">DELETE</button>
  
  
   {{/if}}
@@ -33,9 +34,9 @@
   </div>
 
   <div class="form-group">
-    <label for="hungry">Hungry?</label><br>
+    <label for="hungry">WhAt TyPe Of BuRgEr WoUlD yOu LiKe To DeVoUr?</label><br>
     <input type="radio" name="hungry" value="1" id="hungry" checked> Hungry<br>
-    <input type="radio" name="hungry" value="0" id="awake"> Awake
+    {{!-- <input type="radio" name="hungry" value="0" id="awake"> Awake --}}
   </div>
 
   <button type="submit">Add Burger</button>

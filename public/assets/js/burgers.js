@@ -36,6 +36,35 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
 
+    $(".delete").on("click", function(){
+
+      console.log($(this).attr("id"), "this is the id ")
+
+
+      fetch(`/api/burgers/${$(this).attr("id")}`, {
+
+        method: 'DELETE',
+        headers: {
+          Accept: 'appliburgerion/json',
+          'Content-Type': 'appliburgerion/json',
+        },
+
+        // make sure to serialize the JSON body
+        
+      }).then((response) => {
+        // Check that the response is all good
+        // Reload the page so the user can see the new quote
+        if (response.ok) {
+          
+          location.reload('/');
+        } else {
+          alert('something went wrong!');
+        }
+      });
+    }) 
+
+
+
 
 
 
