@@ -63,46 +63,35 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
     }) 
 
-  
 
-    // // UPDATE
-    // const changeSleepBtns = document.querySelectorAll('.change-sleep');
-  
-    // // Set up the event listener for the create button
-    // if (changeSleepBtns) {
-    //   changeSleepBtns.forEach((button) => {
-    //     button.addEventListener('click', (e) => {
-    //       console.log('click')
-    //       // Grabs the id of the element that goes by the name, "id"
-    //       const id = e.target.getAttribute('data-id');
-    //       const newSleep = e.target.getAttribute('data-newsleep');
-  
-    //       const newSleepState = {
-    //         sleepy: newSleep,
-    //       };
-  
-    //       fetch(`/api/burgers/${id}`, {
-    //         method: 'PUT',
-    //         headers: {
-    //           Accept: 'appliburgerion/json',
-    //           'Content-Type': 'appliburgerion/json',
-    //         },
-  
-    //         // make sure to serialize the JSON body
-    //         body: JSON.stringify(newSleepState),
-    //       }).then((response) => {
-    //         // Check that the response is all good
-    //         // Reload the page so the user can see the new quote
-    //         if (response.ok) {
-    //           console.log(`changed sleep to: ${newSleep}`);
-    //           loburgerion.reload('/');
-    //         } else {
-    //           alert('something went wrong!');
-    //         }
-    //       });
-    //     });
+    // $('create-form').on("click", function(){
+
+    //   console.log($(this).attr("id"), "this is the id ")
+
+
+    //   fetch(`/api/burgers/${$(this).attr("id")}`, {
+
+    //     method: 'POST',
+    //     headers: {
+    //       Accept: 'application/json',
+    //       'Content-Type': 'application/json',
+    //     },
+
+    //     // make sure to serialize the JSON body
+        
+    //   }).then((response) => {
+    //     // Check that the response is all good
+    //     // Reload the page so the user can see the new quote
+    //     if (response.ok) {
+          
+    //       location.reload('/');
+    //     } else {
+    //       alert('something went wrong!');
+    //     }
     //   });
-    // }
+    // }) 
+
+
   
     // CREATE
     const createburgerBtn = document.getElementById('create-form');
@@ -141,25 +130,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
     }
   
-    DELETE
-    const deleteburgerBtns = document.querySelectorAll('.delete-burger');
-  
-    // Set up the event listeners for each delete button
-    deleteburgerBtns.forEach((button) => {
-      button.addEventListener('click', (e) => {
-        const id = e.target.getAttribute('data-id');
-  
-        // Send the delete request
-        fetch(`/api/burgers/${id}`, {
-          method: 'DELETE',
-        }).then((res) => {
-          console.log(res);
-          console.log(`Deleted burger: ${id}`);
-  
-          // Reload the page
-          loburgerion.reload();
-        });
-      });
-    });
+    
   });
   

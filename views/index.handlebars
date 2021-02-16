@@ -1,43 +1,70 @@
+<header>
 <h1>Burgers</h1>
+<img class="burgerpng" src="../assets/img/burgerburger.png" alt="burger">
+</header>
 
-<h2>Burgers to Devour</h2>
+<main>
 
-<ul>
+
+
+<div class="row">
+  <div class="col-md-4">
+
+    <h2>Burgers to Devour</h2>
+
+    <br>
+
+    <ul>
   {{#each burgers}}
   
   {{#unless devoured}}
- <h1> {{this.name}}</h1>
-  <button id={{this.id}} class="devoured">devoured</button>
+ <h1> {{this.name}}</h1><button id={{this.id}} class="devoured btn btn-warning btn-sm">devoured</button>
   {{/unless}}
   {{/each}}
 </ul>
 
-<h2>Devoured</h2>
+  </div>
+  <div class="col-md-4">
+
+    <h2>Add a Burger</h2>
+
+    <br>
+
+<form id="create-form">
+
+  <div class="form-group">
+    <h2>What type of burger would YOU like to devour?</h2>
+
+    <br>
+    
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+  <button type="submit" class="btn btn-success btn-lg">Add Burger</button>
+</form>
+  </div>
+
+  <div class="col-md-4">
+
+    <h2>Devoured</h2>
+
+    <br>
 
 <ul>
   {{#each burgers}}
   {{#if devoured}}
-  <h1> {{this.name}}</h1>
-  <button id={{this.id}} class="delete">DELETE</button>
- 
- 
+  <h1> {{this.name}}<button id={{this.id}} class="delete btn btn-danger btn-sm">DELETE</button></h1>
   {{/if}}
   {{/each}}
 </ul>
 
-<h2>Add a Burger</h2>
-<form id="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
   </div>
+</div>
 
-  <div class="form-group">
-    <label for="hungry">WhAt TyPe Of BuRgEr WoUlD yOu LiKe To DeVoUr?</label><br>
-    <input type="radio" name="hungry" value="1" id="hungry" checked> Hungry<br>
-    {{!-- <input type="radio" name="hungry" value="0" id="awake"> Awake --}}
-  </div>
+</main>
 
-  <button type="submit">Add Burger</button>
-</form>
+<footer>
+
+
+</footer>
+
