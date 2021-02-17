@@ -1,9 +1,9 @@
-body {
-    
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: orange ;
-  }
+* {
+    background-color: rgb(255, 196, 0);
+    font-family: 'Permanent Marker', cursive;
+    color: red;
+}
+
 
 .burgerpng {
     display: block;
@@ -12,12 +12,21 @@ body {
     width: 300px;
     height: 300px;
 }
+
+h2 {
+    text-align: center;
+    color: black;
+  }
   
   h1 {
+    font-size: xx-large;
+    font-weight: bolder;
     text-align: center;
+    padding: 50px;
   }
+
+  h3 {
+    font-size: large;
+  }
+
   
-  p {
-      
-    font-size: 20px;
-  }

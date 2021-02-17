@@ -1,11 +1,7 @@
 <header>
-<h1>Burgers</h1>
-<img class="burgerpng" src="../assets/img/burgerburger.png" alt="burger">
+  <h1>BURGERZz</h1>
+  <img class="burgerpng" src="../assets/img/burgerburger.png" alt="burger">
 </header>
-
-<main>
-
-
 
 <div class="row">
   <div class="col-md-4">
@@ -15,33 +11,34 @@
     <br>
 
     <ul>
-  {{#each burgers}}
-  
-  {{#unless devoured}}
- <h1> {{this.name}}</h1><button id={{this.id}} class="devoured btn btn-warning btn-sm">devoured</button>
-  {{/unless}}
-  {{/each}}
-</ul>
+      {{#each burgers}}
+      {{#unless devoured}}
+      <h3>{{this.name}} <button id={{this.id}} class="devoured btn btn-primary btn-sm">DEVOUR</button></h3>
+      {{/unless}}
+      {{/each}}
+    </ul>
 
   </div>
   <div class="col-md-4">
 
-    <h2>Add a Burger</h2>
+    <h2>ADD A BURGER</h2>
 
     <br>
 
-<form id="create-form">
+    <form id="create-form">
 
-  <div class="form-group">
-    <h2>What type of burger would YOU like to devour?</h2>
+      <div class="form-group">
 
-    <br>
-    
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-  <button type="submit" class="btn btn-success btn-lg">Add Burger</button>
-</form>
+        <label for="ca">Burger Name:</label>
+        <input type="text" id="ca" name="name">
+      </div>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6"><button type="submit" class="btn btn-success btn-lg">Add Burger</button></div>
+        <div class="col-md-3"></div>
+      </div>
+
+    </form>
   </div>
 
   <div class="col-md-4">
@@ -50,21 +47,19 @@
 
     <br>
 
-<ul>
-  {{#each burgers}}
-  {{#if devoured}}
-  <h1> {{this.name}}<button id={{this.id}} class="delete btn btn-danger btn-sm">DELETE</button></h1>
-  {{/if}}
-  {{/each}}
-</ul>
+    <ul>
+      {{#each burgers}}
+      {{#if devoured}}
+      <h3> {{this.name}} <button id={{this.id}} class="delete btn btn-danger btn-sm">DELETE</button></h3>
+      {{/if}}
+      {{/each}}
+    </ul>
 
   </div>
 </div>
 
-</main>
 
 <footer>
 
 
 </footer>
-
